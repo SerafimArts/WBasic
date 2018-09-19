@@ -7,15 +7,10 @@
  */
 declare(strict_types=1);
 
+use Railt\Io\File;
 use Serafim\WBasic\Compiler;
 
 require __DIR__ . '/vendor/autoload.php';
 
-$src = Railt\Io\File::fromSources('
-   REM Example
-   A = 23
-   B = 42
-   C = "asdasd" & "asdasdasd"
-');
-
-echo (new Compiler())->generate($src);
+echo (new Compiler())
+    ->generate(File::fromPathname(__DIR__ . '/example.bas'));

@@ -13,7 +13,10 @@ use Railt\Compiler\Exception\UnrecognizedTokenException;
 use Railt\Parser\Ast\NodeInterface;
 use Railt\Parser\Ast\RuleInterface;
 use Serafim\WBasic\Builder\BuilderInterface;
+use Serafim\WBasic\Builder\ConditionBuilder;
+use Serafim\WBasic\Builder\ExpressionBuilder;
 use Serafim\WBasic\Builder\OperatorBuilder;
+use Serafim\WBasic\Builder\PrintBuilder;
 use Serafim\WBasic\Builder\ValueBuilder;
 use Serafim\WBasic\Builder\VariableBuilder;
 
@@ -26,9 +29,12 @@ class Builder
      * @var string[]
      */
     private const RULES_MAPPING = [
-        'VariableDefinition' => VariableBuilder::class,
-        'Operator'           => OperatorBuilder::class,
-        'Value'              => ValueBuilder::class,
+        'VariableDefinition'   => VariableBuilder::class,
+        'ConditionDefinition'  => ConditionBuilder::class,
+        'ExpressionDefinition' => ExpressionBuilder::class,
+        'PrintDefinition'      => PrintBuilder::class,
+        'Operator'             => OperatorBuilder::class,
+        'Value'                => ValueBuilder::class,
     ];
 
     /**

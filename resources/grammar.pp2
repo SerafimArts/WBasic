@@ -6,6 +6,10 @@
 %token T_OP_OR              OR\b
 %token T_OP_XOR             XOR\b
 %token T_VAR                [a-zA-Z]\b
+%token T_OP_IF              IF\b
+%token T_OP_THEN            THEN\b
+%token T_OP_ELSE            ELSE\b
+%token T_OP_ENDIF           ENDIF\b
 
 %token T_NOT                NOT\b
 %token T_LTE                <=
@@ -31,6 +35,8 @@
 
 __program
     : VariableDefinition()
+    | ConditionDefinition()
+    | PrintDefinition()
     ;
 
 #Operator
@@ -70,11 +76,28 @@ Variable
 
 
 #VariableDefinition
-    : <T_VAR> __variableDefinitionOperator() Value()
+    : <T_VAR> ::T_EQ:: Value()
     ;
 
-__variableDefinitionOperator
-    : <T_EQ> #Operator
+#ConditionDefinition
+  : ::T_OP_IF:: ExpressionDefinition() ::T_OP_THEN::
+      ConditionBody()
+      ConditionElseDefinition()?
+    ::T_OP_ENDIF::
+  ;
+
+#ConditionElseDefinition
+  : ::T_OP_ELSE:: ConditionBody()
+  ;
+
+#ConditionBody
+    : __program()*
     ;
 
+#ExpressionDefinition
+  : <T_VAR> Operator() Value()
+  ;
 
+#PrintDefinition
+  : ::T_OP_PRINT:: Value()
+  ;
