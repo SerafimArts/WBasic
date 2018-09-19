@@ -1,0 +1,80 @@
+
+%skip T_COMMENT             REM[^\n]+
+
+%token T_OP_PRINT           PRINT\b
+%token T_OP_AND             AND\b
+%token T_OP_OR              OR\b
+%token T_OP_XOR             XOR\b
+%token T_VAR                [a-zA-Z]\b
+
+%token T_NOT                NOT\b
+%token T_LTE                <=
+%token T_GTE                >=
+%token T_NEQ                <>
+%token T_LT                 <
+%token T_GT                 >
+%token T_EQ                 =
+%token T_AND                &
+%token T_OR                 \|
+
+%token T_HEX_NUMBER         \-?0x([0-9a-fA-F]+)
+%token T_BIN_NUMBER         \-?0b([0-1]+)
+%token T_STRING             "([^"\\]*(?:\\.[^"\\]*)*)"
+%token T_NUMBER             \-?(?:0|[1-9][0-9]*)(?:\.[0-9]+)?(?:[eE][\+\-]?[0-9]+)?
+
+%skip T_WHITESPACE          \s+
+%skip T_SEMICOLON           ;
+
+#Program
+  : __program()*
+  ;
+
+__program
+    : VariableDefinition()
+    ;
+
+#Operator
+  : <T_NOT> __operator()
+  | __operator()
+  ;
+
+__operator
+  : <T_LTE>
+  | <T_GTE>
+  | <T_NEQ>
+  | <T_LT>
+  | <T_GT>
+  | <T_EQ>
+  ;
+
+#Value
+  : String()
+  | Number()
+  | Variable()
+  ;
+
+String
+  : <T_STRING>
+  | <T_STRING> ::T_AND:: String()
+  ;
+
+Number
+  : <T_NUMBER>
+  | <T_HEX_NUMBER>
+  | <T_BIN_NUMBER>
+  ;
+
+Variable
+  : <T_VAR>
+  ;
+
+
+#VariableDefinition
+    : <T_VAR> __variableDefinitionOperator() Value()
+    ;
+
+__variableDefinitionOperator
+    : <T_EQ> #Operator
+    ;
+
+

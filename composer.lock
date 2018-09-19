@@ -1,0 +1,362 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "14a18630fd8128733e2a0332f94a59d6",
+    "packages": [
+        {
+            "name": "railt/io",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/railt/io.git",
+                "reference": "6658233da61d507a047ab02970f457d0dac51b58"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/railt/io/zipball/6658233da61d507a047ab02970f457d0dac51b58",
+                "reference": "6658233da61d507a047ab02970f457d0dac51b58",
+                "shasum": ""
+            },
+            "require": {
+                "ext-spl": "*",
+                "php": "^7.1.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Railt\\Io\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kirill Nesmeyanov",
+                    "email": "nesk@xakep.ru"
+                }
+            ],
+            "description": "The Railt filesystem utils",
+            "homepage": "http://railt.org",
+            "keywords": [
+                "file",
+                "filesystem",
+                "fso",
+                "input",
+                "output",
+                "utils"
+            ],
+            "time": "2018-07-21T01:49:40+00:00"
+        },
+        {
+            "name": "railt/lexer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/railt/lexer.git",
+                "reference": "c8636ef55fe68a140d74b0179fa025deb3539247"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/railt/lexer/zipball/c8636ef55fe68a140d74b0179fa025deb3539247",
+                "reference": "c8636ef55fe68a140d74b0179fa025deb3539247",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "ext-pcre": "*",
+                "ext-spl": "*",
+                "php": ">=7.1.3",
+                "railt/io": "2.*|dev-master"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Railt\\Lexer\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kirill Nesmeyanov",
+                    "email": "nesk@xakep.ru"
+                }
+            ],
+            "description": "Fast implementation of the stateful and stateless lexers",
+            "homepage": "http://railt.org",
+            "keywords": [
+                "language",
+                "lexer",
+                "php"
+            ],
+            "time": "2018-09-13T20:29:13+00:00"
+        },
+        {
+            "name": "railt/parser",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/railt/parser.git",
+                "reference": "0d36031ca9311541c0f780ed76cc5ea021957cc6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/railt/parser/zipball/0d36031ca9311541c0f780ed76cc5ea021957cc6",
+                "reference": "0d36031ca9311541c0f780ed76cc5ea021957cc6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "ext-pcre": "*",
+                "ext-spl": "*",
+                "php": ">=7.1.3",
+                "railt/io": "2.*|dev-master",
+                "railt/lexer": "2.*|dev-master"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Railt\\Parser\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ivan Enderlin",
+                    "email": "ivan.enderlin@hoa-project.net"
+                },
+                {
+                    "name": "Kirill Nesmeyanov",
+                    "email": "nesk@xakep.ru"
+                },
+                {
+                    "name": "Hoa community",
+                    "homepage": "https://hoa-project.net/"
+                }
+            ],
+            "description": "Syntactic LL(k) parser-analyzer implementation",
+            "homepage": "http://railt.org",
+            "keywords": [
+                "ast",
+                "language",
+                "ll1",
+                "llk",
+                "lr",
+                "parser",
+                "php",
+                "slr"
+            ],
+            "time": "2018-09-14T14:34:05+00:00"
+        }
+    ],
+    "packages-dev": [
+        {
+            "name": "railt/compiler",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/railt/compiler.git",
+                "reference": "91194f7dbc4038bf28811a2f627656c440d97edd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/railt/compiler/zipball/91194f7dbc4038bf28811a2f627656c440d97edd",
+                "reference": "91194f7dbc4038bf28811a2f627656c440d97edd",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "ext-pcre": "*",
+                "ext-spl": "*",
+                "php": ">=7.1.3",
+                "railt/io": "2.*|dev-master",
+                "railt/lexer": "2.*|dev-master",
+                "railt/parser": "2.*|dev-master",
+                "zendframework/zend-code": "~3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.5",
+                "railt/console": "2.*|dev-master",
+                "symfony/finder": "~4.0"
+            },
+            "suggest": {
+                "railt/console": "(2.*) Console Scripts Support"
+            },
+            "type": "library",
+            "extra": {
+                "railt": {
+                    "commands": [
+                        "Railt\\Compiler\\Console\\GrammarCompileCommand",
+                        "Railt\\Compiler\\Console\\CompileCommand",
+                        "Railt\\Compiler\\Console\\AnalyzeCommand"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Railt\\Compiler\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kirill Nesmeyanov",
+                    "email": "nesk@xakep.ru"
+                }
+            ],
+            "description": "The Railt Compiler Parser-Generator",
+            "homepage": "http://railt.org",
+            "keywords": [
+                "ast",
+                "compiler",
+                "grammar",
+                "language",
+                "pp"
+            ],
+            "time": "2018-09-14T14:16:45+00:00"
+        },
+        {
+            "name": "zendframework/zend-code",
+            "version": "3.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-code.git",
+                "reference": "c21db169075c6ec4b342149f446e7b7b724f95eb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-code/zipball/c21db169075c6ec4b342149f446e7b7b724f95eb",
+                "reference": "c21db169075c6ec4b342149f446e7b7b724f95eb",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1",
+                "zendframework/zend-eventmanager": "^2.6 || ^3.0"
+            },
+            "require-dev": {
+                "doctrine/annotations": "~1.0",
+                "ext-phar": "*",
+                "phpunit/phpunit": "^6.2.3",
+                "zendframework/zend-coding-standard": "^1.0.0",
+                "zendframework/zend-stdlib": "^2.7 || ^3.0"
+            },
+            "suggest": {
+                "doctrine/annotations": "Doctrine\\Common\\Annotations >=1.0 for annotation features",
+                "zendframework/zend-stdlib": "Zend\\Stdlib component"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.3.x-dev",
+                    "dev-develop": "3.4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\Code\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "provides facilities to generate arbitrary code using an object oriented interface",
+            "homepage": "https://github.com/zendframework/zend-code",
+            "keywords": [
+                "code",
+                "zf2"
+            ],
+            "time": "2018-08-13T20:36:59+00:00"
+        },
+        {
+            "name": "zendframework/zend-eventmanager",
+            "version": "3.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-eventmanager.git",
+                "reference": "a5e2583a211f73604691586b8406ff7296a946dd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-eventmanager/zipball/a5e2583a211f73604691586b8406ff7296a946dd",
+                "reference": "a5e2583a211f73604691586b8406ff7296a946dd",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6 || ^7.0"
+            },
+            "require-dev": {
+                "athletic/athletic": "^0.1",
+                "container-interop/container-interop": "^1.1.0",
+                "phpunit/phpunit": "^5.7.27 || ^6.5.8 || ^7.1.2",
+                "zendframework/zend-coding-standard": "~1.0.0",
+                "zendframework/zend-stdlib": "^2.7.3 || ^3.0"
+            },
+            "suggest": {
+                "container-interop/container-interop": "^1.1.0, to use the lazy listeners feature",
+                "zendframework/zend-stdlib": "^2.7.3 || ^3.0, to use the FilterChain feature"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.2-dev",
+                    "dev-develop": "3.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\EventManager\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Trigger and listen to events within a PHP application",
+            "homepage": "https://github.com/zendframework/zend-eventmanager",
+            "keywords": [
+                "event",
+                "eventmanager",
+                "events",
+                "zf2"
+            ],
+            "time": "2018-04-25T15:33:34+00:00"
+        }
+    ],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "railt/parser": 20,
+        "railt/lexer": 20,
+        "railt/compiler": 20
+    },
+    "prefer-stable": true,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=7.1.3"
+    },
+    "platform-dev": []
+}

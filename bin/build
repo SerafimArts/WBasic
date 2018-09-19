@@ -1,0 +1,19 @@
+#!/usr/bin/env php
+<?php
+/**
+ * This file is part of WBasic package.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+declare(strict_types=1);
+
+use Railt\Compiler\Compiler;
+use Railt\Io\File;
+
+require __DIR__ . '/../vendor/autoload.php';
+
+Compiler::load(File::fromPathname(__DIR__ . '/../resources/grammar.pp2'))
+    ->setNamespace('Serafim\\WBasic')
+    ->setClassName('Parser')
+    ->saveTo(__DIR__ . '/../src');
